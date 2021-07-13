@@ -1,0 +1,283 @@
+
+
+html {
+  overflow-y: auto;
+  background: #faf3e6;
+  background-size: 92px;
+  display: flex;
+  justify-content: center;
+}
+
+
+body {
+  font: 112.5%/1.3 sans-serif;
+  color: #3f3d3a;
+  overflow: hidden;
+}
+
+
+/* Add triangles to top and bottom of intro page */
+body:before, body:after {
+  content: '';
+  display: block;
+  width: 0; 
+  height: 0; 
+}
+
+body:before {
+  border-left: 170px solid #faf3e6;
+  border-right: 170px solid #faf3e6;
+  border-top: 190px solid #00000000;
+  background: #f7644d url(images/halftone.png) repeat;
+  margin: 0 auto -45px;
+  position: absolute;
+  left: calc(50% - 172px);
+}
+
+body:after {
+  border-left: 7em solid #faf3e6;
+  border-right: 7em solid #faf3e6;
+  border-bottom: 10em solid transparent;
+  background: #ffb14d url('images/halftone.png') repeat;
+  margin: -10em auto 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  margin: 0.25em auto;
+  max-width: 1800px;
+  position: relative;
+  padding: 0 4%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-wrapper-inner{
+  width: 80%;
+}
+
+.page-wrapper:before {
+  content: '';
+  height: 20px;
+  background: url('images/horiz_border.png') repeat-x 0 -2px;
+  background-size: 40em;
+  display: block;
+}
+
+.page-wrapper:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  color: #272625;
+  text-transform: uppercase;
+}
+
+a {
+  color: #3f3d3a;
+}
+
+a:hover, a:focus {
+  color: #e5452c;
+}
+
+p {
+  margin-bottom: 0.15em;
+}
+
+.intro {
+  clear: both;
+  padding-top: 2em;
+}
+
+.intro p {
+  margin: 0 auto 1em;
+}
+
+
+.summary p:nth-child(2) {
+  font-style: italic;
+}
+
+.summary a {
+  display: inline-block;
+}
+
+.intro h1 { 
+  font-size: 3em;
+  font-weight: 200px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0em;
+}
+
+.intro h1::before {
+  content: "ኣዲስ";
+  display: block;
+  line-height: 100px; 
+}
+
+.intro h2 {
+  font-size: 5em; 
+  font-family: copal-std-outline, sans-serif;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  padding-top: 3.5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  /*background: url(images/icon.png) no-repeat center .9em;*/
+  /*background: url(https://render.bitstrips.com/v2/cpanel/76c3b171-f0cf-4dd6-b91f-91bd86693f61-d7e09532-5783-45ba-9153-d08e362960d9-v1.png?transparent=1&palette=1) no-repeat center .9em;*/
+  /*background: url(images/bit3.png) no-repeat center; */
+}
+
+.preamble {
+  margin: 0 auto 1em;
+}
+
+.preamble p {
+  margin-bottom: 0.15em;
+}
+
+.preamble h2 {
+  margin:  0.5em auto 0.55em;
+  padding: 0.5em 0 0.55em;
+  font-family: "grecian-light-face",sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  background: 
+    url(images/horiz_border.png) repeat-x top right,
+    url(images/horiz_border.png) repeat-x bottom left;
+  background-size: 13em;
+}
+
+.preamble p:first-line {
+  text-transform: uppercase;
+}
+
+.preamble p:nth-child(1n+3) {
+  text-indent: 1.5em;
+}
+
+.preamble p:nth-child(1n+3):first-line {
+  text-transform: none;
+}
+
+
+.img_cont {
+    width: 100% ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 59px;
+}
+
+.horz-border {
+    width: 50%;
+    min-width: 600;
+    /* 
+      later when you impliment media query 
+      change min width to 0 or small reasonable number
+     */
+ }
+
+.icon-container {
+  position: absolute;
+  left: calc(50% - 200px);
+  z-index: -1;
+  top: 131px;
+}
+
+img.icon {
+  border-radius: 50%;
+}
+
+ .page_img_cont {
+    width: 99% ;
+    margin-top: 15%;
+ }
+
+ .page-border {
+    width: 100%;
+ }
+
+ .page-wrapper {
+    width: 100%;
+    background: 
+      url('images/vert_border.png') repeat-y top left,
+      url('images/vert_border.png') repeat-y right 100px;
+    background-size: 0.75em;
+    margin: 0.5em auto;
+    padding: 0 2px;
+  }
+
+
+
+
+
+
+
+
+
+
+/*Insert poem in 2 columns */
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+ footer {
+    background: 
+    url('images/horiz_border.png') repeat-x bottom left;
+    background-size: 40em;
+    margin: 5.5em 1px -1px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 8.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 12) { // ipad
+  html {/*
+    overflow-y: auto;
+    background: #FFFF;
+    background-size: 92px;
+  }*/
+}
+
+@media only screen and (max-width: 600px) { 
+  html {/*
+    overflow-y: auto;
+    background: #FFFF;
+    background-size: 92px;
+  }*/
+}
